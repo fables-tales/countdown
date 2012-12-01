@@ -4,9 +4,15 @@
         <title>Student Robotics - Countdown</title>
         <link type="text/css" href="static/css/main.css" rel="stylesheet"/>
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+        <style type="text/css">
+            @font-face {
+                font-family: 'Ostrich Sans Black';
+                src: url("http://pohuitung.com/share/fonts/Eurostile/Eurostile%20LT%20Medium.ttf");
+            }
+        </style>
     </head>
     <body>
-        <h1 id="countdown" style="width:800px; margin:80px auto; text-align:center; font-family:'helvetica neue'; font-size:80pt;">
+        <h1 id="countdown" style="width:1000px; margin:80px auto; text-align:center; font-family:'Ostrich Sans Black'; font-size:80pt;">
             bees
         </h1>
         <script type="text/javascript">
@@ -24,9 +30,9 @@
                 if (deltaSeconds < 10) { deltaSeconds = "0" + deltaSeconds }
                 if (deltaMinutes < 10) { deltaMinutes = "0" + deltaMinutes }
                 if (deltaHours < 10)   { deltaHours = "0" + deltaHours }
-                $("#countdown").text("Days: " + deltaDays + " Hours: " + deltaHours + ":" + deltaMinutes + ":" + deltaSeconds);
+                $("#countdown").html("Days: " + deltaDays + "<br/> Hours: " + deltaHours + ":" + deltaMinutes + ":" + deltaSeconds);
             }
-            setInterval(updateCountdown, 100)
-        </script>
-    </body>
+setInterval(updateCountdown, 100);
+</script>
+</body>
 </html>
